@@ -1,0 +1,1807 @@
+@import url('https://fonts.google.com/');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    background-color: #ffffffd2;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 3%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    opacity: 0.85;
+    border-radius: 10px;
+}
+
+
+.button1 {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .button1::before {
+    margin-left: auto;
+  }
+  
+  .button1::after, button1::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  .button1:hover::after, button1:hover::before {
+    width: 100%;
+  }
+
+.logo img {
+  width: 80px; 
+  height: auto;
+  margin-left: 250px; 
+}
+  
+
+ul {
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+ul li {
+    margin-right: 40px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+}
+
+ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+
+ul li a:hover::before {
+    width: 100%;
+    left: 0;
+    transition: width 0.2s ease-in, left 0.2s ease-in;
+}
+
+
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(image_plomberie_accueil.webp);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+h1 {
+    font-family: Roboto,Helvetica Neue,Arial;
+    font-size: 40px;
+    margin-left: 150px;
+    margin-top: 250px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h2 {
+    font-family: Roboto,Helvetica Neue,Arial;
+    margin-left: 150px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.text-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 49%;
+    margin-top: 33%;
+    margin-left: 5%;
+    padding: 10px; 
+    display: inline-block; 
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.text-container h1, .text-container h2 {
+    color: #ffffff; 
+    font-size: 26px;
+    margin: 10px 0; 
+    padding: 10px; 
+}
+
+.text-container h2 {
+    font-size: 20px;
+}
+
+.text-container:hover {
+    transform: scale(1.1);
+}
+
+
+.fond_blanc_cartes {
+    z-index: -1;
+    margin-top: -50px;
+    height: 300px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.image1 {
+    margin-top: -720px;
+}
+
+.image2 {
+    margin-top: 390px;
+}
+
+.accompagnement1 {
+    margin-top: -675px;
+    font-size: 26px;
+    margin-left: 49%;
+    margin-right: 5%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.accompagnement2 {
+    margin-top: -675px;
+    font-size: 26px;
+    margin-left: 49%;
+    margin-right: 5%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.separation {
+    width: 43%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-left: 26%;
+    position: relative;
+    z-index: 1;
+    margin-top: -110px;
+}
+
+.info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 33%;
+    margin-top: -2.7%;
+}
+
+.info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 62.1%;
+    margin-top: -2.7%;
+}
+
+
+.rating {
+  margin-left: 44%;
+  display: inline-block;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  cursor: pointer;
+  color: #9dff00;
+  transition: color 0.3s;
+}
+
+.rating label:before {
+  content: '\2605';
+  font-size: 40px;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #9dff00;
+  transition: color 0.3s;
+}
+
+
+
+
+.titrefaq {
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 34%;
+  font-size: 3rem;
+  margin-top: 250px;
+}
+
+
+.faq-container {
+  width: 400px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 160px; 
+  margin-left: 37.5%;
+}
+
+.faq-question {
+  background-color: #fff;
+  color: #3498db;
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  font-size: 18px;
+  position: relative;
+  padding-right: 40px;
+}
+
+.faq-question:hover {
+  background-color: #f3f4f6;
+}
+
+.faq-question::after {
+  content: '';
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml;utf8,<svg class="CollapsibleTriggerSvg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M36 30L24 18L12 30"></path></svg>');
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+  width: 20px;
+  height: 20px;
+}
+
+.faq-question.active {
+  background-color: #f4f5f6;
+}
+
+.faq-question.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.faq-question.active + .faq-answer {
+  max-height: 1000px;
+  padding: 15px;
+}
+
+footer {
+  margin-top: 200px;
+  height: 160px;
+  width: auto;
+  background-color: #333;
+}
+
+
+.scrolling-container {
+  margin-top: 400px;
+  margin-left: 240px;
+  display: flex;
+  transition: transform 0.8s ease;
+}
+
+.scrolling-image {
+  width: 400px; 
+  height: auto; 
+  border-radius: 20px;
+  object-fit: cover;
+  margin: 0 20px;
+  transition: transform 0.5s ease;
+}
+
+.credits {
+  color: #FFF;
+  margin-top: 0.5%;
+  margin-left: 43.7%;
+}
+
+.emailfooter {
+  color: #FFF;
+  margin-top: 0.5%;
+  margin-left: 43.4%;
+}
+
+.phonefooter {
+  color: #FFF;
+  margin-top: 0.5%;
+  margin-left: 45.7%;
+}
+
+
+
+@media screen and (max-width: 1669px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 33.5%;
+    margin-top: -3%;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: -2.7%;
+    margin-left: 58%;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 65.1%;
+    margin-top: -3.3%;
+  }
+  .accompagnement1 {
+    margin-top: -675px;
+    font-size: 26px;
+    margin-left: 52%;
+    margin-right: 5%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -675px;
+    font-size: 26px;
+    margin-left: 52%;
+    margin-right: 5%;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+}
+
+
+@media screen and (max-width: 1580px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 33.5%;
+    margin-top: -3.3%;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: -2.9%;
+    margin-left: 58%;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 65.1%;
+    margin-top: -3.3%;
+  }
+  .accompagnement1 {
+    margin-top: -675px;
+    font-size: 26px;
+    margin-left: 54%;
+    margin-right: 5%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -675px;
+    font-size: 26px;
+    margin-left: 54%;
+    margin-right: 5%;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+}
+
+
+@media screen and (max-width: 1490px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 33.9%;
+    margin-top: -3.7%;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: -2.9%;
+    margin-left: 58%;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 65.8%;
+    margin-top: -3.6%;
+  }
+  .accompagnement1 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 56%;
+    margin-right: 5%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 56%;
+    margin-right: 5%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .image-container {
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+  }
+
+  #myImage {
+      max-width: 700px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container2 {
+      margin-top: 350px;
+      margin-left: 100px;
+      display: flex;
+      height: 100vh;
+  }
+  
+  #myImage2 {
+      width: 700px;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .rating {
+    margin-left: 46%;
+    display: inline-block;
+  }
+  .credits {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.7%;
+  }
+  .emailfooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.1%;
+  }
+  .phonefooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 47.7%;
+  }
+
+}
+
+@media screen and (max-width: 1450px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 33.9%;
+    margin-top: -3.7%;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: -2.9%;
+    margin-left: 58%;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 65.8%;
+    margin-top: -3.6%;
+  }
+  .accompagnement1 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 57%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 57%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .image-container {
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+  }
+
+  #myImage {
+      max-width: 700px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container2 {
+      margin-top: 350px;
+      margin-left: 100px;
+      display: flex;
+      height: 100vh;
+  }
+  
+  #myImage2 {
+      width: 700px;
+      height: 600px;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .rating {
+    margin-left: 46%;
+    display: inline-block;
+  }
+  .credits {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.7%;
+  }
+  .emailfooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.1%;
+  }
+  .phonefooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 47.7%;
+  }
+  .text-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 45%;
+    margin-top: 40%;
+    margin-left: 5%;
+    padding: 10px; 
+    display: inline-block; 
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+}
+
+
+@media screen and (max-width: 1420px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 35.4%;
+    margin-top: -3.8%;
+  }
+  .telephone {
+    width: 70px; 
+    height: auto; 
+    margin-top: 25%; 
+    margin-left: 29%;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: -2.9%;
+    margin-left: 58%;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 65.8%;
+    margin-top: -3.9%;
+  }
+  .accompagnement1 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .image-container {
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+  }
+
+  #myImage {
+      max-width: 40%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container2 {
+      margin-top: 350px;
+      margin-left: 100px;
+      display: flex;
+      height: 100vh;
+  }
+  
+  #myImage2 {
+    max-width: 40%;
+    height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .rating {
+    margin-left: 46%;
+    display: inline-block;
+  }
+  .credits {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.7%;
+  }
+  .emailfooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.1%;
+  }
+  .phonefooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 47.7%;
+  }
+  .text-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 45%;
+    margin-top: 40%;
+    margin-left: 5%;
+    padding: 10px; 
+    display: inline-block; 
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  .titrefaq {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 33%;
+    font-size: 3rem;
+    margin-top: 250px;
+  }
+  .separation {
+    width: 43%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-left: 30%;
+    position: relative;
+    z-index: 1;
+    margin-top: -110px;
+  }
+
+}
+
+
+@media screen and (max-width: 1360px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.4%;
+    margin-top: -3.9%;
+  }
+  .telephone {
+    width: 70px; 
+    height: auto; 
+    margin-top: 10%; 
+    margin-left: 48%;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 46.6%;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.5%;
+    margin-top: -3.9%;
+  }
+  .accompagnement1 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .image-container {
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+  }
+
+  #myImage {
+      max-width: 40%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container2 {
+      margin-top: 350px;
+      margin-left: 100px;
+      display: flex;
+      height: 100vh;
+  }
+  
+  #myImage2 {
+    max-width: 40%;
+    height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .rating {
+    margin-left: 46%;
+    display: inline-block;
+  }
+  .credits {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.7%;
+  }
+  .emailfooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.1%;
+  }
+  .phonefooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 48.4%;
+  }
+  .text-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 45%;
+    margin-top: 43%;
+    margin-left: 5%;
+    padding: 10px; 
+    display: inline-block; 
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  .titrefaq {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 33%;
+    font-size: 3rem;
+    margin-top: 250px;
+  }
+  .separation {
+    width: 43%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-left: 30%;
+    position: relative;
+    z-index: 1;
+    margin-top: -150px;
+  }
+
+}
+
+
+@media screen and (max-width: 1235px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.4%;
+    margin-top: -4.2%;
+  }
+  .telephone {
+    width: 70px; 
+    height: auto; 
+    margin-top: 10%; 
+    margin-left: 48%;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: 27px;
+    margin-left: 46.6%;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.5%;
+    margin-top: -3.9%;
+  }
+  .accompagnement1 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .image-container {
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+  }
+
+  #myImage {
+      max-width: 40%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container2 {
+      margin-top: 350px;
+      margin-left: 100px;
+      display: flex;
+      height: 100vh;
+  }
+  
+  #myImage2 {
+    max-width: 40%;
+    height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .rating {
+    margin-left: 46%;
+    display: inline-block;
+  }
+  .credits {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.7%;
+  }
+  .emailfooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.1%;
+  }
+  .phonefooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 48.4%;
+  }
+  .text-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 45%;
+    margin-top: 43%;
+    margin-left: 5%;
+    padding: 10px; 
+    display: inline-block; 
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  .titrefaq {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 33%;
+    font-size: 3rem;
+    margin-top: 250px;
+  }
+  .separation {
+    width: 43%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-left: 30%;
+    position: relative;
+    z-index: 1;
+    margin-top: -150px;
+  }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 56.4%;
+    margin-top: -4.2%;
+  }
+  .telephone {
+    width: 70px; 
+    height: auto; 
+    margin-top: 10%; 
+    margin-left: 48.6%;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: 27px;
+    margin-left: 46.9%;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.9%;
+    margin-top: -3.9%;
+  }
+  .accompagnement1 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .image-container {
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+  }
+
+  #myImage {
+      max-width: 40%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container2 {
+      margin-top: 350px;
+      margin-left: 100px;
+      display: flex;
+      height: 100vh;
+  }
+  
+  #myImage2 {
+    max-width: 40%;
+    height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .rating {
+    margin-left: 46%;
+    display: inline-block;
+  }
+  .credits {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.7%;
+  }
+  .emailfooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.1%;
+  }
+  .phonefooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 48.4%;
+  }
+  .text-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 45%;
+    margin-top: 43%;
+    margin-left: 5%;
+    padding: 10px; 
+    display: inline-block; 
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  .titrefaq {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 33%;
+    font-size: 3rem;
+    margin-top: 250px;
+  }
+  .separation {
+    width: 43%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-left: 30%;
+    position: relative;
+    z-index: 1;
+    margin-top: -150px;
+  }
+
+}
+
+
+@media screen and (max-width: 1090px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.2%;
+    margin-top: -4.9%;
+  }
+  .telephone {
+    width: 70px; 
+    height: auto; 
+    margin-top: 10%; 
+    margin-left: 45.8%;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: 27px;
+    margin-left: 44.2%;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 54.9%;
+    margin-top: -4.9%;
+  }
+  .accompagnement1 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -675px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .image-container {
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+  }
+
+  #myImage {
+      max-width: 40%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container2 {
+      margin-top: 350px;
+      margin-left: 100px;
+      display: flex;
+      height: 100vh;
+  }
+  
+  #myImage2 {
+    max-width: 40%;
+    height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .rating {
+    margin-left: 42.5%;
+    display: inline-block;
+  }
+  .credits {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 42%;
+  }
+  .emailfooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 41.5%;
+  }
+  .phonefooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.6%;
+  }
+  .text-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 45%;
+    margin-top: 43%;
+    margin-left: 5%;
+    padding: 10px; 
+    display: inline-block; 
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  .titrefaq {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 26%;
+    font-size: 3rem;
+    margin-top: 250px;
+  }
+  .separation {
+    width: 43%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-left: 30%;
+    position: relative;
+    z-index: 1;
+    margin-top: -150px;
+  }
+  .faq-container {
+    width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 160px; 
+    margin-left: 32.5%;
+  }
+
+}
+
+
+@media screen and (max-width: 992px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.2%;
+    margin-top: -4.9%;
+  }
+  .telephone {
+    width: 70px; 
+    height: auto; 
+    margin-top: 10%; 
+    margin-left: 45.8%;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: 27px;
+    margin-left: 44.0%;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.4%;
+    margin-top: -5.3%;
+  }
+  .accompagnement1 {
+    margin-top: -700px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -700px;
+    font-size: 24px;
+    margin-left: 51%;
+    margin-right: 2%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .image-container {
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+  }
+
+  #myImage {
+      max-width: 40%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container2 {
+      margin-top: 350px;
+      margin-left: 100px;
+      display: flex;
+      height: 100vh;
+  }
+  
+  #myImage2 {
+    max-width: 40%;
+    height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .rating {
+    margin-left: 42.5%;
+    display: inline-block;
+  }
+  .credits {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 42%;
+  }
+  .emailfooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 41.5%;
+  }
+  .phonefooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 45.6%;
+  }
+  .text-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 45%;
+    margin-top: 52%;
+    margin-left: 5%;
+    padding: 10px; 
+    display: inline-block; 
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  .titrefaq {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 26%;
+    font-size: 3rem;
+    margin-top: 250px;
+  }
+  .separation {
+    width: 43%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-left: 30%;
+    position: relative;
+    z-index: 1;
+    margin-top: -150px;
+  }
+  .faq-container {
+    width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 160px; 
+    margin-left: 32.5%;
+  }
+  .logo img {
+    width: 80px; 
+    height: auto;
+    margin-left: 150px; 
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.2%;
+    margin-top: -4.9%;
+    display: none;
+  }
+  .telephone {
+    width: 70px; 
+    height: auto; 
+    margin-top: 30px; 
+    margin-left: 45.8%;
+    display: none;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: 27px;
+    margin-left: 44.0%;
+    display: none;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.4%;
+    margin-top: -5.3%;
+    display: none;
+  }
+  .accompagnement1 {
+    margin-top: -250px;
+    font-size: 24px;
+    margin-left: 17%;
+    margin-right: 16%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -450px;
+    font-size: 24px;
+    margin-left: 17%;
+    margin-right: 16%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .image-container {
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+  }
+
+  #myImage {
+      max-width: 82%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container2 {
+      margin-top: 350px;
+      margin-left: 100px;
+      display: flex;
+      height: 100vh;
+  }
+  
+  #myImage2 {
+    margin-top: -200px;
+    max-width: 82%;
+    height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .rating {
+    margin-left: 38.5%;
+    display: inline-block;
+  }
+  .credits {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 38%;
+  }
+  .emailfooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 37.5%;
+  }
+  .phonefooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 42.6%;
+  }
+  .text-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 35%;
+    margin-top: 60%;
+    margin-left: 5%;
+    padding: 10px; 
+    display: inline-block; 
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  .titrefaq {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 0%;
+    font-size: 3rem;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .separation {
+    width: 43%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-left: 30%;
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+  }
+  .faq-container {
+    width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 160px; 
+    margin-left: 23.5%;
+  }
+  .logo img {
+    width: 80px; 
+    height: auto;
+    margin-left: 130px; 
+  }
+  .scrolling-container {
+    margin-top: 170px;
+    margin-left: 240px;
+    display: flex;
+    transition: transform 0.8s ease;
+  }
+  .button1 {
+    margin-left: 6%;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.2%;
+    margin-top: -4.9%;
+    display: none;
+  }
+  .telephone {
+    width: 70px; 
+    height: auto; 
+    margin-top: 30px; 
+    margin-left: 45.8%;
+    display: none;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: 27px;
+    margin-left: 44.0%;
+    display: none;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.4%;
+    margin-top: -5.3%;
+    display: none;
+  }
+  .accompagnement1 {
+    margin-top: -250px;
+    font-size: 24px;
+    margin-left: 17%;
+    margin-right: 16%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -450px;
+    font-size: 24px;
+    margin-left: 17%;
+    margin-right: 16%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .image-container {
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+  }
+
+  #myImage {
+      max-width: 82%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container2 {
+      margin-top: 350px;
+      margin-left: 100px;
+      display: flex;
+      height: 100vh;
+  }
+  
+  #myImage2 {
+    margin-top: -200px;
+    max-width: 82%;
+    height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  .rating {
+    margin-left: 34.5%;
+    display: inline-block;
+  }
+  .credits {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 33.5%;
+  }
+  .emailfooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 32.5%;
+  }
+  .phonefooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 39.6%;
+  }
+  .text-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 35%;
+    margin-top: 60%;
+    margin-left: 5%;
+    padding: 10px; 
+    display: inline-block; 
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  .titrefaq {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 0%;
+    font-size: 3rem;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .separation {
+    width: 43%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-left: 30%;
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+  }
+  .faq-container {
+    width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 160px; 
+    margin-left: 15.9%;
+  }
+  .logo img {
+    width: 80px; 
+    height: auto;
+    margin-left: 130px; 
+  }
+  .scrolling-container {
+    margin-top: 170px;
+    margin-left: 240px;
+    display: flex;
+    transition: transform 0.8s ease;
+  }
+  .button1 {
+    display: none;
+    margin-left: 6%;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+}
+
+
+@media screen and (max-width: 470px) {
+  .info_tel {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.2%;
+    margin-top: -4.9%;
+    display: none;
+  }
+  .telephone {
+    width: 70px; 
+    height: auto; 
+    margin-top: 30px; 
+    margin-left: 45.8%;
+    display: none;
+  }
+  .e-mail {
+    width: 70px;
+    height: auto;
+    margin-top: 27px;
+    margin-left: 44.0%;
+    display: none;
+  }
+  .info_email {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 55.4%;
+    margin-top: -5.3%;
+    display: none;
+  }
+  .accompagnement1 {
+    margin-top: -250px;
+    font-size: 24px;
+    margin-left: 17%;
+    margin-right: 16%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .accompagnement2 {
+    margin-top: -450px;
+    font-size: 24px;
+    margin-left: 17%;
+    margin-right: 16%;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .image-container {
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+  }
+
+  #myImage {
+    margin-left: -40px;
+      max-width: 92%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: opacity 0.5s ease-in-out;
+  }
+  
+  .image-container2 {
+      margin-top: 350px;
+      margin-left: 100px;
+      display: flex;
+      height: 100vh;
+  }
+  
+  #myImage2 {
+    margin-left: -40px;
+    margin-top: -200px;
+    max-width: 92%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 7px;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .rating {
+    margin-left: 29.5%;
+    display: inline-block;
+  }
+  .credits {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 28.5%;
+  }
+  .emailfooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 27.5%;
+  }
+  .phonefooter {
+    color: #FFF;
+    margin-top: 0.5%;
+    margin-left: 36.6%;
+  }
+  .text-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    margin-right: 15%;
+    margin-top: 70%;
+    margin-left: 9%;
+    padding: 2px; 
+    display: inline-block; 
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+  .titrefaq {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 0%;
+    font-size: 3rem;
+    margin-top: 100px;
+    text-align: center;
+  }
+  .separation {
+    width: 43%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    margin-left: 28%;
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+  }
+  .faq-container {
+    width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 160px; 
+    margin-left: 5.9%;
+  }
+  .logo img {
+    width: 80px; 
+    height: auto;
+    margin-left: 40px; 
+  }
+  .scrolling-container {
+    margin-top: 170px;
+    margin-left: 240px;
+    display: flex;
+    transition: transform 0.8s ease;
+  }
+  .button1 {
+    display: none;
+    margin-left: 6%;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+}
+

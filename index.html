@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Design_sans_titre.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>RMPC</title><link rel="stylesheet" href="style.css">
+</head>
+<body onload="">
+   </div>
+    <header>
+        <div class="logo">
+            <img src="Logo_RMPC.png" alt="logo_RMPC">
+        </div>
+        <div class="button1">
+            RMPC
+        </div>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#images" onclick="scrollToImages()">Images</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+    </header>
+
+
+    <div class="text-container">
+        <h1>
+            Bienvenue chez RMPC, Votre Expert en Plomberie
+        </h1>
+        <h2>
+            Nous sommes fiers de vous offrir des solutions de plomberie de qualité pour tous vos besoins résidentiels et commerciaux. Avec une équipe d'experts qualifiés et une expérience exceptionnelle, nous sommes là pour résoudre vos problèmes de plomberie, de la réparation des fuites aux rénovations complètes de salle de bains. Faites-nous confiance pour des services rapides, fiables et abordables.
+        </h2>
+    </div>
+    
+
+    <div class="fond_blanc_cartes""></div>
+
+    <style>
+        .image-container {
+            margin-left: 100px;
+            display: flex;
+            height: 100vh;
+        }
+
+        #myImage {
+            width: 700px;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 7px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .image-container2 {
+            margin-top: 350px;
+            margin-left: 100px;
+            display: flex;
+            height: 100vh;
+        }
+
+        #myImage2 {
+            width: 700px;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 7px;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div id="images" class="image-container">
+    <img id="myImage" src="IMG_4812.jpg" alt="Image 1">
+</div>
+
+<script>
+    var imageNames1 = ['IMG_4812.jpg', 'IMG_5710.jpg'];
+    var currentImageIndex1 = 0;
+
+    function switchImage1() {
+        var imageElement = document.getElementById('myImage');
+        imageElement.style.opacity = 0;
+
+        setTimeout(function () {
+            imageElement.src = imageNames1[currentImageIndex1];
+            currentImageIndex1 = (currentImageIndex1 + 1) % imageNames1.length;
+            imageElement.style.opacity = 1;
+        }, 500);
+
+        setTimeout(switchImage1, 3000);
+    }
+
+    switchImage1();
+</script>
+<div class="accompagnement1">
+    Découvrez le changement incroyable dans cette cuisine !De l'ancien et terne à une toute nouvelle allure moderne. La rénovation a vraiment fait des merveilles ici !
+</div>
+
+<div id="images2" class="image-container2">
+    <img id="myImage2" src="IMG_6751.jpg" alt="Image 2">
+</div>
+
+<script>
+    var imageNames2 = ['IMG_6751.jpg', 'IMG_6879.jpg'];
+    var currentImageIndex2 = 0;
+
+    function switchImage2() {
+        var imageElement = document.getElementById('myImage2');
+        imageElement.style.opacity = 0;
+
+        setTimeout(function () {
+            imageElement.src = imageNames2[currentImageIndex2];
+            currentImageIndex2 = (currentImageIndex2 + 1) % imageNames2.length;
+            imageElement.style.opacity = 1;
+        }, 500);
+
+        setTimeout(switchImage2, 3000);
+    }
+
+    switchImage2();
+</script>
+<div class="accompagnement2">
+    Explorez cette transformation étonnante de salle de bain, passant d'un style ancien à une toute nouvelle élégance. Une rénovation qui apporte fraîcheur et modernité à cet espace essentiel.
+</div>
+    
+
+
+    
+    <div class="scrolling-container">
+        <img class="scrolling-image" src="élégante-salle-de-bain-en-marbre-gris-à-marseille.png" alt="Image 1">
+        <img class="scrolling-image" src="IMG_5710.jpg" alt="Image 2">
+        <img class="scrolling-image" src="IMG_6880.jpg" alt="Image 3">
+        <img class="scrolling-image" src="image_plomberie_accueil.webp" alt="Image 4">
+        <img class="scrolling-image" src="élégante-salle-de-bain-en-marbre-gris-à-marseille.png" alt="Image 5">
+        <img class="scrolling-image" src="IMG_5708.jpg" alt="Image 6">
+       
+    </div>
+
+    <script>
+        
+        const scrollingContainer = document.querySelector('.scrolling-container');
+        let isScrolling = false;
+
+        
+        window.addEventListener('scroll', () => {
+            if (!isScrolling) {
+                window.requestAnimationFrame(() => {
+                    
+                    const scrollPosition = window.scrollY;
+
+                    const speed = 0.3; 
+                    const translateValue = -scrollPosition * speed;
+                    scrollingContainer.style.transform = `translateX(${translateValue}px)`;
+
+                    isScrolling = false;
+                });
+            }
+            isScrolling = true;
+        });
+    </script>
+
+
+    <div class="telephone">
+        <img src="telephoner.png" alt="" style="width: 70px; height: auto; margin-top: 12%; margin-left: 29%;">
+    </div>
+    <div class="info_tel">
+        07 82 43 05 26
+    </div>
+    <div class="e-mail">
+        <img src="enveloppe.png" alt="" style="width: 70px; height: auto; margin-top: -2.6%; margin-left: 58%;">
+    </div>
+    <div class="info_email">
+        rmpc.plomberie@gmail.com
+    </div>
+
+    <div class="separation" id="avis"></div>
+      
+
+      
+        
+        <div class="titrefaq" id="faq">Questions et Réponses</div>
+    
+        <div id="faq" class="faq-container">
+            <button class="faq-question">Quels types de matériaux utilisez-vous dans vos projets de rénovation ?</button>
+            <div class="faq-answer">
+                Nous privilégions l'utilisation de matériaux de haute qualité et durables dans nos projets de rénovation. Nous collaborons avec des fournisseurs réputés pour garantir la satisfaction de nos clients et la longévité des résultats finaux.
+            </div>
+        
+            <button class="faq-question">Comment puis-je préparer ma maison avant le début des travaux de rénovation ?</button>
+            <div class="faq-answer">
+                Avant le début des travaux, nous recommandons de dégager la zone de travail, de protéger les objets de valeur, et de discuter avec notre équipe des préparatifs spécifiques. Nous sommes là pour vous guider à chaque étape et assurer un processus sans tracas.
+            </div>
+        
+            <button class="faq-question">Comment puis-je planifier un rendez-vous pour discuter de mon projet de rénovation ?</button>
+            <div class="faq-answer">
+                Pour planifier un rendez-vous, vous pouvez nous contacter par téléphone ou par Email. Nous serons ravis de discuter de votre projet, d'entendre vos idées et de répondre à toutes vos questions.
+            </div>
+            <button class="faq-question">Comment pouvez vous nous contacter ?</button>
+            <div class="faq-answer">
+                Pour nous contacter vous pouvez nous appeler pour prendre rendez vous au 07 82 43 05 26. Ou bien par email à rmpc.plomberie@gmail.com
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const faqQuestions = document.querySelectorAll('.faq-question');
+        
+                faqQuestions.forEach(function(faqQuestion) {
+                    faqQuestion.addEventListener('click', function() {
+                        faqQuestion.classList.toggle('active');
+                    });
+                });
+            });
+        </script>
+
+        <footer>
+            <div class="rating">
+                <input value="5" name="rating" id="star5" type="radio">
+                <label for="star5"></label>
+                <input value="4" name="rating" id="star4" type="radio">
+                <label for="star4"></label>
+                <input value="3" name="rating" id="star3" type="radio">
+                <label for="star3"></label>
+                <input value="2" name="rating" id="star2" type="radio">
+                <label for="star2"></label>
+                <input value="1" name="rating" id="star1" type="radio">
+                <label for="star1"></label>
+              </div>
+              <div class="credits">© 2024 RMPC Plomberie</div>
+              <div class="emailfooter">rmpc.plomberie@gmail.com</div>
+              <div class="phonefooter">07 82 43 05 26</div>
+        </footer>
+
+    
+    
+        
+</body>
+</html>
